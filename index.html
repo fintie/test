@@ -1,0 +1,140 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <meta charset="utf-8">
+  <title>Bootply.com - Bootstrap </title>
+  <title></title>
+  <meta name="generator" content="Bootply">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" type="text/css" rel="stylesheet" media="all">
+  <link href="http://www.bootply.com/plugins/bootstrap-select.min.css" type="text/css" rel="stylesheet">
+
+
+  <style type="text/css">
+  .tasks{
+    background-color: #F6F8F8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .tasks span{
+    font-weight: bold;
+  }
+  .tasks input{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .tasks a{
+    color: #000;
+    text-decoration: none;
+    border:none;
+  }
+  .tasks a:hover{
+    border-bottom: dashed 1px #0088cc;
+  }
+  .tasks label{
+    display: block;
+    text-align: center;
+  }
+  </style>
+</head>
+
+<!-- HTML code from Bootply.com editor -->
+
+<body>
+
+ <div class="progress progress-striped active">
+  <div style="width: 40%;" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+  </div>
+</div>
+<div class="row tasks">
+  <div class="col-md-6">
+    <p><span>Identify your campaign audience.</span>Who are we talking to here? Understand your buyer persona before launching into a campaign, so you can target them correctly.</p>
+  </div>
+  <div class="col-md-2">
+    <label>2014-01-29</label>
+  </div>
+  <div class="col-md-2">
+    <input name="progress" class="progress" value="90" type="checkbox">
+  </div>
+  <div class="col-md-2">
+    <input name="done" class="done" value="20" type="checkbox">
+  </div>
+</div><!-- tasks -->
+
+<div class="row tasks">
+  <div class="col-md-6">
+    <p><span>Set your goals + benchmarks</span>Having SMART goals can help you be
+      sure that you’ll have tangible results to share with the world (or your
+      boss) at the end of your campaign.</p>
+    </div>
+    <div class="col-md-2">
+      <label>2014-01-25</label>
+    </div>
+    <div class="col-md-2">
+      <input name="progress" class="progress" value="30" type="checkbox">
+    </div>
+    <div class="col-md-2">
+      <input name="done" class="done" value="40" type="checkbox">
+    </div>
+  </div><!-- tasks -->
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+
+
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+
+  <!-- JavaScript jQuery code from Bootply.com editor  -->
+
+  <script type="text/javascript">
+
+  $(document).ready(function() {
+
+    $('input').on('click', function(){
+      var valeur = 0;
+      $('input:checked').each(function(){
+       if ( $(this).attr('value') > valeur )
+       {
+         valeur =  $(this).attr('value');
+       }
+     });
+      $('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);    
+    });
+
+  });
+
+  </script>
+
+  <script src="http://www.bootply.com/plugins/bootstrap-select.min.js"></script>
+  
+  <!-- Quantcast Tag -->
+  <script type="text/javascript">
+  var _qevents = _qevents || [];
+
+  (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+  })();
+
+  _qevents.push({
+    qacct:"p-0cXb7ATGU9nz5"
+  });
+  </script>
+
+</body>
+</html>
