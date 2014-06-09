@@ -53,17 +53,12 @@
   </div>
 </div>
 <div class="row tasks">
-  <div class="col-md-6">
-    <p><span>Identify your campaign audience.</span>Who are we talking to here? Understand your buyer persona before launching into a campaign, so you can target them correctly.</p>
+
+  <div class="col-md-2">
+    <input id="progress" value="+10" type="button">
   </div>
   <div class="col-md-2">
-    <label>2014-01-29</label>
-  </div>
-  <div class="col-md-2">
-    <input name="progress" class="progress" value="90" type="checkbox">
-  </div>
-  <div class="col-md-2">
-    <input name="done" class="done" value="20" type="checkbox">
+    <input id="progress" value="+20" type="button">
   </div>
 </div><!-- tasks -->
 
@@ -92,15 +87,28 @@
 
 
 
-
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
-
   <!-- JavaScript jQuery code from Bootply.com editor  -->
 
   <script type="text/javascript">
 
   $(document).ready(function() {
 
+
+    $("#progress").button().click(function(){
+
+
+       var valeur = 0;
+       $('.row tasks').each(function(){
+        if ( $(this).attr('value') > valeur )
+        {
+          valeur =  $(this).attr('value');
+        }
+       });
+       $('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);  
+
+
+    });
+/*
     $('input').on('click', function(){
       var valeur = 0;
       $('input:checked').each(function(){
@@ -109,32 +117,17 @@
          valeur =  $(this).attr('value');
        }
      });
+
       $('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);    
     });
-
+*/
   });
 
   </script>
 
   <script src="http://www.bootply.com/plugins/bootstrap-select.min.js"></script>
   
-  <!-- Quantcast Tag -->
-  <script type="text/javascript">
-  var _qevents = _qevents || [];
-
-  (function() {
-    var elem = document.createElement('script');
-    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-    elem.async = true;
-    elem.type = "text/javascript";
-    var scpt = document.getElementsByTagName('script')[0];
-    scpt.parentNode.insertBefore(elem, scpt);
-  })();
-
-  _qevents.push({
-    qacct:"p-0cXb7ATGU9nz5"
-  });
-  </script>
+  
 
 </body>
 </html>
